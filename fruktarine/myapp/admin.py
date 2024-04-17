@@ -71,16 +71,12 @@ class ProductAdmin(admin.ModelAdmin):
     ]
 
 class OrderAdmin(admin.ModelAdmin):
+    """Заказы."""
     list_display = ['id', 'date_added', 'username', 'email', 'address', 'delivery_date', 'total_price']
     list_filter = ['date_added', 'delivery_date']
     search_fields = ['username', 'email']
     list_per_page = 10
 
-class OrderAdmin(admin.ModelAdmin):
-    """Заказы."""
-    list_display = ['id', 'date_added', 'username', 'email', 'address', 'delivery_date', 'total_price']
-    list_filter = ['date_added', 'delivery_date']
-    search_fields = ['username', 'email']
 
 class OrderItemAdmin(admin.ModelAdmin):
     """Позиции заказа."""
